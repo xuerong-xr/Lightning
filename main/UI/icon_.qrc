@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="btn">
+    <file>../icon/blue_octopus.ico</file>
+  </qresource>
+</RCC>
