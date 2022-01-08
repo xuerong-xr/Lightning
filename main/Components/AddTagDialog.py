@@ -10,7 +10,7 @@ from IconListWid import IconListWid
 from popup_dialog import PopDialog
 
 
-class AddTagDialog(QDialog, PopDialog):
+class AddTagDialog(PopDialog):
     """
     添加标签
     """

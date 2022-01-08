@@ -3,10 +3,11 @@ Author: xtrs
 时间：2021/12/27
 弹窗
 """
+from PyQt5.QtWidgets import QDialog
 from secondary_win import SecWin
 
 
-class PopDialog(SecWin):
+class PopDialog(SecWin, QDialog):
     """
     弹窗
     """
@@ -35,4 +36,3 @@ class PopDialog(SecWin):
         给子控件绑定槽函数
         :return:
         """
-

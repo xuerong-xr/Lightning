@@ -45,7 +45,7 @@ class RegisterWid(UserWid):
         给子控件绑定槽函数
         :return:
         """
-        self.lab_captcha.connect_customized_slot(self.reCaptcha)
+        self.lab_captcha.connect_clicked_slot(self.reCaptcha)
 
     def reCaptcha(self):
         """

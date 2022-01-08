@@ -70,7 +70,9 @@ class BtnTwoActions(QPushButton):
 
 
 class LeaveEnterBtn(QPushButton):
-
+    """
+    提供鼠标进出属性的 btn
+    """
     def __init__(self, parent=None):
         super(LeaveEnterBtn, self).__init__(parent)
         self.isEnter = False

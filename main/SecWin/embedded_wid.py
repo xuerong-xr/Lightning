@@ -4,9 +4,10 @@ Author: xtrs
 内嵌窗口
 """
 from secondary_win import SecWin
+from PyQt5.QtWidgets import QWidget
 
 
-class EmbWid(SecWin):
+class EmbWid(SecWin, QWidget):
     """
     内嵌窗口
     """

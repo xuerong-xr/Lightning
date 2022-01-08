@@ -6,24 +6,26 @@ from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from AddTagDialog import AddTagDialog
-from ModuleListItem import ModuleListItem
+from right_menu import TagListWidRightMenu
 
 
-class MyListWidTag(QListWidget):
+class TagListWid(QListWidget):
+    """
+    .
+    """
 
     def __init__(self, parent=None):
-        super(MyListWidTag, self).__init__(parent)
+        super(TagListWid, self).__init__(parent)
         # TODO(头三个item独特标识，不可以移动)
-        self.setRightMenue()
+        self.setUI()
 
-    def setRightMenue(self):
-        self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.contextMenu = QMenu(self)
-        self.contextMenu.setStyleSheet('QMenu::item:selected{color:rgb(30,205,153)}')
-        self.addTag = self.contextMenu.addAction('添加标签')
-        self.refresh = self.contextMenu.addAction('刷新')
-        self.addTag.triggered.connect(self.toNewTagDialog)
-        self.customContextMenuRequested.connect(lambda: self.contextMenu.exec_(QCursor.pos()))
+    def setUI(self):
+        self.contextMenu = TagListWidRightMenu(self)
+        self.contextMenu.request_menu_bind(self.exec_menu)
+        self.contextMenu.addTagAct.triggered.connect(self.toNewTagDialog)
+
+    def exec_menu(self):
+        self.contextMenu.exec_(QCursor.pos())
 
     def toNewTagDialog(self):
         # 定义一个对话框
@@ -60,25 +62,3 @@ class MyListWidTag(QListWidget):
     def addCustomItems(self, wid_iterable, item_size=(80, 22)):
         for wid_ in wid_iterable:
             self.addCustomItem(wid_, item_size)
-
-
-class MyListWidStrip(QListWidget):
-    """
-    .
-    """
-
-    def __init__(self, parent=None):
-        super(MyListWidStrip, self).__init__(parent)
-        item = QListWidgetItem()
-        item.setSizeHint(QSize(200, 120))
-        self.addItem(item)
-        self.setItemWidget(item, ModuleListItem())
-
-    def addItem(self, *__args):
-        super(MyListWidStrip, self).addItem(*__args)
-
-    def addItems(self, Iterable, p_str=None):
-        super(MyListWidStrip, self).addItems(Iterable)
-
-    def clear(self):
-        super(MyListWidStrip, self).clear()

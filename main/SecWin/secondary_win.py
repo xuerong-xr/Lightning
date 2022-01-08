@@ -7,7 +7,7 @@ from PyQt5.QtGui import QColor
 from setting import Setting as s
 
 
-class SecWin(QWidget):
+class SecWin:
     """
     二级窗口接口
     """

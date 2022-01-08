@@ -4,24 +4,23 @@ Author: xtrs
 """
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
-import PyQt5.QtCore as qtc
 from PyQt5.QtWidgets import QMenu
 
 
-class moduleItemRightMenu(QMenu):
+class StripLWItemRightMenu(QMenu):
     """
     模块内项目的右键菜单
     """
 
     def __init__(self, parent=None):
-        super(moduleItemRightMenu, self).__init__(parent)
+        super(StripLWItemRightMenu, self).__init__(parent)
         self.isShow = False
         self.setUI()
 
     def setUI(self):
         self.editAct = self.addAction('编辑')
         self.deleteAct = self.addAction('删除')
-        self.tagAct = self.addAction('设置标签')
+        self.tagAct = self.addAction('置顶')
         self.editAct.triggered.connect(self.editItem)
         self.deleteAct.triggered.connect(self.deleteItem)
         self.tagAct.triggered.connect(self.setTag)
@@ -49,3 +48,18 @@ class moduleItemRightMenu(QMenu):
     def setTag(self):
         # TODO(直接拖动标签上来设置)
         print('设置标签')
+
+
+class TagListWidRightMenu(QMenu):
+    def __init__(self, parent=None):
+        super(TagListWidRightMenu, self).__init__(parent)
+        self.setUI()
+
+    def setUI(self):
+        self.addTagAct = self.addAction('添加标签')
+        self.refreshAct = self.addAction('刷新')
+        self.setStyleSheet('QMenu::item:selected{color:rgb(30,205,153)}')
+        self.parent().setContextMenuPolicy(Qt.CustomContextMenu)
+
+    def request_menu_bind(self, func):
+        self.parent().customContextMenuRequested.connect(func)

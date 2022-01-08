@@ -14,7 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/main/module/tool" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main/module/tool/adjustShapes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main/SecWin" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main/ComponentWid" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main/Components" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

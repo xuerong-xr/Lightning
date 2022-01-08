@@ -7,7 +7,7 @@ from PyQt5.uic import loadUiType
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from main.ComponentWid.my_win import MyWin
+from main.Components.my_win import MyWin
 
 ui, _ = loadUiType('login_dialog.ui')
 

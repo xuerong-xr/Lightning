@@ -3,7 +3,7 @@ Author: xtrs
 主要的四大功能模块管理界面
 """
 from PyQt5.QtWidgets import *
-from main.ComponentWid.MyFrame import MyFrame
+from main.Components.MyFrame import MyFrame
 from user_wid import UserWid
 
 
