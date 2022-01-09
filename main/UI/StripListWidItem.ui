@@ -495,7 +495,7 @@ QLabel:hover{color: rgb(99, 99, 99)}</string>
              </widget>
             </item>
             <item alignment="Qt::AlignHCenter">
-             <widget class="LeaveEnterBtn" name="pushButton_4">
+             <widget class="LeaveEnterBtn" name="setBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -539,7 +539,6 @@ QLabel:hover{color: rgb(99, 99, 99)}</string>
  </customwidgets>
  <resources>
   <include location="icon_.qrc"/>
-  <include location="C:/Users/学容xr/.designer/backup/icon_.qrc"/>
  </resources>
  <connections/>
 </ui>

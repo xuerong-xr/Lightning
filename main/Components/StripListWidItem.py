@@ -6,6 +6,7 @@ from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import *
 import PyQt5.QtCore as qtc
 
+from StripLWItemEmployDialog import StripLWItemEmployDialog
 from StripLWItemSettingDialog import StripLWItemSettingDialog
 from my_widget import MyWidget
 from right_menu import StripLWItemRightMenu
@@ -25,6 +26,7 @@ class StripListWidItem(MyWidget, ui_moduleListItem):
         super(StripListWidItem, self).__init__(parent)
         self.setupUi(self)
         self.ui_init_slot()
+        self.bindSlots()
         self.render_smaller()
 
     def ui_init_slot(self):
@@ -32,6 +34,12 @@ class StripListWidItem(MyWidget, ui_moduleListItem):
         self.contextMenu.request_menu_bind(self.exec_menu)
         self.nameLabel = self.findChild(QLabel)
         self.nameLabel.setToolTip(self.nameLabel.text())
+        self.setDialog = StripLWItemSettingDialog()
+        self.employDialog = StripLWItemEmployDialog()
+
+    def bindSlots(self):
+        self.setDialog.setWindowTitle(f'模板设置-{self.label.text()}')
+        self.setBtn.clicked.connect(self.setDialog.exec_)
 
     def exec_menu(self):
         # TODO(优化算法，1。过滤子控件内的点击，2.不强制做一次变小)
@@ -42,8 +50,8 @@ class StripListWidItem(MyWidget, ui_moduleListItem):
         self.render_smaller()
 
     def mouseDoubleClickEvent(self, QMouseEvent):
-        self.setDialog = StripLWItemSettingDialog()
-        self.setDialog.exec_()
+        self.employDialog.setWindowTitle(f'使用模板-{self.label.text()}')
+        self.employDialog.exec_()
         print('双击了')
 
     def enterEvent(self, *args, **kwargs):

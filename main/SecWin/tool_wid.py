@@ -11,6 +11,14 @@ class ToolWid(EmbWid):
     """
     内嵌窗口_工具
     """
+
+    def ui_init_slot(self):
+        """
+        接收界面载入信号 【槽】
+        :return:
+        """
+        super(ToolWid, self).ui_init_slot()
+
     def getChildren(self):
         """
         获取子控件

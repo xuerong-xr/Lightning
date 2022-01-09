@@ -48,7 +48,7 @@ class TagListWid(QListWidget):
                 if text_ in text_array:
                     continue
                 item = QListWidgetItem()
-                item.setSizeHint(QSize(80, 22))
+                item.setSizeHint(QSize(160, 22))
                 item.setText(text_)
                 item.setIcon(icon)
                 self.addItem(item)

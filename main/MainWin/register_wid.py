@@ -6,7 +6,7 @@ Author: xtrs
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from main.UI_Manager.user_wid import UserWid
+from main.MainWin.user_wid import UserWid
 from my_captcha import createCaptcha
 from my_math import rand4words
 

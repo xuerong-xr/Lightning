@@ -28,7 +28,8 @@ class ModuleWid(UserWid):
         :return:
         """
         # QStackWidget
-        self.staWid_module = self.findChild(QStackedWidget, 'staWid_module')
+        self.staWid_strip = self.findChild(QStackedWidget, 'staWid_strip')
+        self.staWid_tag = self.findChild(QStackedWidget, 'staWid_tag')
 
         # 自定义Frame 四大功能 按钮
         # TODO(突然不能识别提升的自定义类)
@@ -38,8 +39,12 @@ class ModuleWid(UserWid):
         self.fra_user_tool = self.findChild(QFrame, 'fra_user_tool')
         self.fra_user_tem.setChecked(True)
 
-        self.listWid_tag = self.findChildren(QListWidget)[0]
-        self.listWid_strip = self.findChildren(QListWidget)[1]
+        self.splitter_module: QSplitter = self.findChild(QSplitter)
+        self.splitter_module.setStretchFactor(0, 1)
+        self.splitter_module.setStretchFactor(1, 5)
+
+        # self.listWid_tag = self.findChildren(QListWidget)[0]
+        # self.listWid_strip = self.findChildren(QListWidget)[1]
 
     def update_setting(self):
         """
@@ -59,7 +64,8 @@ class ModuleWid(UserWid):
         self.fra_user_tool.connect_clicked(lambda: self.set_staWid_module_index(3))
 
     def set_staWid_module_index(self, index):
-        self.staWid_module.setCurrentIndex(index)
+        self.staWid_strip.setCurrentIndex(index)
+        self.staWid_tag.setCurrentIndex(index)
 
     def import_item(self):
         pass
@@ -68,7 +74,6 @@ class ModuleWid(UserWid):
         pass
 
     def getAllStrip(self):
-        self.listWid_strip.add_itemAdd()
         print('我是getAllStrip')
 
     def filterStrip(self, index):

@@ -1,0 +1,269 @@
+{
+    "name": "Form",
+    "setting": [
+        {
+            "id": 0,
+            "name": "widget_adjustShapes",
+            "type_": "QWidget",
+            "value": ""
+        },
+        {
+            "id": 1,
+            "name": "axWgt_adjustShapes",
+            "type_": "QAxWidget",
+            "value": ""
+        },
+        {
+            "id": 2,
+            "name": "line_4",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 3,
+            "name": "frm_adjustShapes_1",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 4,
+            "name": "label_16",
+            "type_": "QLabel",
+            "value": "\u8c03\u6574\u6587\u6863\u4e2d\u7684\u56fe\u7247"
+        },
+        {
+            "id": 5,
+            "name": "frm_aS_1_1",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 6,
+            "name": "rBtn_aS_file",
+            "type_": "QRadioButton",
+            "value": true
+        },
+        {
+            "id": 7,
+            "name": "path_frame_1",
+            "type_": "GetPathFrame",
+            "value": ""
+        },
+        {
+            "id": 8,
+            "name": "Edit_aS_filePath",
+            "type_": "QLineEdit",
+            "value": ""
+        },
+        {
+            "id": 9,
+            "name": "Btn_aS_filePath",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 10,
+            "name": "rBtn_aS_dir",
+            "type_": "QRadioButton",
+            "value": false
+        },
+        {
+            "id": 11,
+            "name": "path_frame_2",
+            "type_": "GetPathFrame",
+            "value": ""
+        },
+        {
+            "id": 12,
+            "name": "Edit_aS_dirPath",
+            "type_": "QLineEdit",
+            "value": ""
+        },
+        {
+            "id": 13,
+            "name": "Btn_aS_dirPath",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 14,
+            "name": "line_5",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 15,
+            "name": "frame_32",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 16,
+            "name": "rBtn_aS_chapter",
+            "type_": "QRadioButton",
+            "value": false
+        },
+        {
+            "id": 17,
+            "name": "rBtn_aS_all",
+            "type_": "QRadioButton",
+            "value": true
+        },
+        {
+            "id": 18,
+            "name": "rBtn_aS_tab",
+            "type_": "QRadioButton",
+            "value": false
+        },
+        {
+            "id": 19,
+            "name": "frame_23",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 20,
+            "name": "rBtn_aS_allTab",
+            "type_": "QRadioButton",
+            "value": false
+        },
+        {
+            "id": 21,
+            "name": "rBtn_aS_partTab",
+            "type_": "QRadioButton",
+            "value": false
+        },
+        {
+            "id": 22,
+            "name": "frame_33",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 23,
+            "name": "label_19",
+            "type_": "QLabel",
+            "value": "\u4ee5\u4e0b\u529f\u80fd\u4ec5\u652f\u6301windows\u7cfb\u7edf"
+        },
+        {
+            "id": 24,
+            "name": "Btn_aS_choosePlatform",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 25,
+            "name": "as_scope_edit",
+            "type_": "QLineEdit",
+            "value": ""
+        },
+        {
+            "id": 26,
+            "name": "line_2",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 27,
+            "name": "frm_aS_1_2",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 28,
+            "name": "size_frame",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 29,
+            "name": "Frame",
+            "type_": "SizeAdjustFrame",
+            "value": ""
+        },
+        {
+            "id": 30,
+            "name": "width_unit",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 31,
+            "name": "label_20",
+            "type_": "QLabel",
+            "value": " \u5bbd:"
+        },
+        {
+            "id": 32,
+            "name": "w_up_btn",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 33,
+            "name": "w_edit",
+            "type_": "UpDownEdit",
+            "value": "8.0"
+        },
+        {
+            "id": 34,
+            "name": "w_down_btn",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 35,
+            "name": "label_29",
+            "type_": "QLabel",
+            "value": "cm"
+        },
+        {
+            "id": 36,
+            "name": "height_unit",
+            "type_": "QFrame",
+            "value": ""
+        },
+        {
+            "id": 37,
+            "name": "h_down_btn",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 38,
+            "name": "h_edit",
+            "type_": "UpDownEdit",
+            "value": "6.0"
+        },
+        {
+            "id": 39,
+            "name": "label_19",
+            "type_": "QLabel",
+            "value": " \u9ad8:"
+        },
+        {
+            "id": 40,
+            "name": "h_up_btn",
+            "type_": "QPushButton",
+            "value": false
+        },
+        {
+            "id": 41,
+            "name": "label_28",
+            "type_": "QLabel",
+            "value": "cm"
+        },
+        {
+            "id": 42,
+            "name": "lockRatio_btn",
+            "type_": "QCheckBox",
+            "value": false
+        },
+        {
+            "id": 43,
+            "name": "Btn_aS_exec",
+            "type_": "QPushButton",
+            "value": false
+        }
+    ]
+}

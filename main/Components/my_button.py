@@ -4,36 +4,35 @@ Author: xtrs
 """
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
-import PyQt5.QtCore as qtc
 import PyQt5.QtGui as qui
 
 sizePolicyPre = QSizePolicy.Preferred
 
-
-class ASButton(QPushButton):
-    """
-    adjustShapes 打开目录的btn
-    """
-    signal_str = qtc.pyqtSignal(str)
-
-    def __init__(self, parent=None):
-        super(ASButton, self).__init__(parent)
-
-    def mouseReleaseEvent(self, QMouseEvent):
-        # 打开系统目录界面
-        name = self.objectName()
-        print(name)
-        if name.endswith('_docPath'):
-            path = QFileDialog.getOpenFileName(self, '选择文件', '/', filter='Word07 files(*.docx)')[0]
-        elif name.endswith('_excelPath'):
-            path = ''
-        elif name.endswith('_filePath'):
-            path = QFileDialog.getExistingDirectory(self, '选择文件夹', '/')
-        else:
-            path = ''
-        if path:
-            # 拿到路径后 把信号发射出去
-            self.signal_str.emit(path)
+#
+# class ASButton(QPushButton):
+#     """
+#     adjustShapes 打开目录的btn
+#     """
+#     signal_str = qtc.pyqtSignal(str)
+#
+#     def __init__(self, parent=None):
+#         super(ASButton, self).__init__(parent)
+#
+#     def mouseReleaseEvent(self, QMouseEvent):
+#         # 打开系统目录界面
+#         name = self.objectName()
+#         print(name)
+#         if name.endswith('_filePath'):
+#             path = QFileDialog.getOpenFileName(self, '选择文件', '/', filter='Word07 files(*.docx)')[0]
+#         elif name.endswith('_excelPath'):
+#             path = ''
+#         elif name.endswith('_dirPath'):
+#             path = QFileDialog.getExistingDirectory(self, '选择文件夹', '/')
+#         else:
+#             path = ''
+#         if path:
+#             # 拿到路径后 把信号发射出去
+#             self.signal_str.emit(path)
 
 
 # + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +

@@ -124,7 +124,7 @@
         </item>
         <item>
          <property name="text">
-          <string>新建项目</string>
+          <string>今日水印</string>
          </property>
          <item>
           <property name="text">
@@ -139,17 +139,17 @@
         </item>
         <item>
          <property name="text">
-          <string>新建项目</string>
+          <string>操作库</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>新建项目</string>
+          <string>文档处理软件</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>新建项目</string>
+          <string>默认设置</string>
          </property>
         </item>
        </widget>
@@ -169,7 +169,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>路径</string>
+         <string>路径：操作库&gt;操作</string>
         </property>
        </widget>
       </item>
@@ -178,7 +178,30 @@
         <property name="currentIndex">
          <number>2</number>
         </property>
-        <widget class="QWidget" name="stackedWidgetPage1"/>
+        <widget class="QWidget" name="stackedWidgetPage1">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>内置操作</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="listView"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>自定义操作</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="listView_2"/>
+          </item>
+         </layout>
+        </widget>
         <widget class="QWidget" name="stackedWidgetPage2"/>
         <widget class="QWidget" name="stackedWidgetPage3">
          <layout class="QVBoxLayout" name="verticalLayout_2">

@@ -2,7 +2,7 @@
 Author: xtrs
 功能模块--功能条目列表控件--条目--条目设置对话框
 """
-from PyQt5.QtWidgets import QApplication, QColorDialog
+from PyQt5.QtWidgets import QApplication, QColorDialog, QFontDialog
 import PyQt5.QtCore as qtc
 from PyQt5.QtCore import Qt
 from popup_dialog import PopDialog
@@ -24,12 +24,18 @@ class StripLWItemSettingDialog(PopDialog, ui_StripLWItemSettingDialog):
         self.bindSlots()
 
     def bindSlots(self):
-        self.pushButton.clicked.connect(self.getColor)
+        self.bg_color_btn.clicked.connect(self.getColor)
+        self.font_btn.clicked.connect(self.getFont)
 
     def getColor(self):
         color = QColorDialog().getColor()
         if color.isValid():
             self.label.setStyleSheet(f'background-color:{color.name()}')
+
+    def getFont(self):
+        font, isValid = QFontDialog().getFont()
+        if isValid:
+            self.label.setFont(font)
 
 
 if __name__ == '__main__':

@@ -27,8 +27,13 @@ Author: xtrs
 
 
 # 页码范围正则表达式常量
+import re
+
 PAGES_RANGE_REGEXP = r'^((\d{1,4}|(\d{1,4}-\d{1,4}))[,，.])*(\d{1,4}|(\d{1,4}-\d{1,4}))?$'
 TAG_INPUT_REGEXP = r'^(([^\s;；]{1,6}[;；])*[^\s;；]{1,6})?$'
+# 这里很奇葩 这样在为''时，按回车键，不会被拦截，如果''满足条件 则不会响应editingFinished
+SHAPES_SIZE = r'^\d{0,3}(\.\d?)?'
+re.compile(r'^\d{0,3}(\.\d)?$')
 # 1cm = 28.346磅
 CM_POUND_UNIT = 28.346
 # PLATFORM
@@ -42,19 +47,19 @@ SET_DEFAULT = {
         'main': [
             {
                 'id': 101,
-                'name': 'rBtn_aS_doc',
+                'name': 'rBtn_aS_file',
                 'type': 'QRadioButton',
                 'value': True
             },
             {
                 'id': 102,
-                'name': 'rBtn_aS_file',
+                'name': 'rBtn_aS_dir',
                 'type': 'QRadioButton',
                 'value': False
             },
             {
                 'id': 103,
-                'name': 'rBtn_aS_doc',
+                'name': 'rBtn_aS_file',
                 'type': 'QRadioButton',
                 'value': False
             }
@@ -62,13 +67,13 @@ SET_DEFAULT = {
         'as': [
             {
                 'id': 201,
-                'name': 'rBtn_aS_doc',
+                'name': 'rBtn_aS_file',
                 'type': 'QRadioButton',
                 'value': True
             },
             {
                 'id': 202,
-                'name': 'rBtn_aS_file',
+                'name': 'rBtn_aS_dir',
                 'type': 'QRadioButton',
                 'value': False
             },
@@ -104,13 +109,13 @@ SET_DEFAULT = {
             },
             {
                 'id': 208,
-                'name': 'Edit_aS_docPath',
+                'name': 'Edit_aS_filePath',
                 'type': 'QLineEdit',
                 'value': ''
             },
             {
                 'id': 209,
-                'name': 'Edit_aS_filePath',
+                'name': 'Edit_aS_dirPath',
                 'type': 'QLineEdit',
                 'value': ''
             }

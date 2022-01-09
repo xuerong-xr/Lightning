@@ -3,7 +3,7 @@ Author: xtrs
 时间：2021/12/27
 内嵌窗口_用户_登录
 """
-from main.UI_Manager.user_wid import UserWid
+from main.MainWin.user_wid import UserWid
 from PyQt5.QtWidgets import *
 import PyQt5.QtCore as qtc
 
